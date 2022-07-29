@@ -9,25 +9,16 @@ import { Container } from './Container';
 import BallController from './BallController';
 // Styles
 import "./styles.css";
-
-
+// Zustand
+import { useStore } from './store';
 
 
 export default function App() {
-  const [ counter, setCounter ] = useState(0);
-
-  const onAddBall = (e) => {
-    console.log('add ball')
-    setCounter(counter + 1);
-  }
-
-  const onRemoveBall = (e) => {
-    console.log('remove ball')
-    setCounter(counter - 1);
-  }
+  const addBall = useStore(state => state.addBall);
 
   useEffect(() => {
-    const interval = setInterval(() => setCounter(counter => counter + 1), 1000);
+    // add a new ball every second
+    const interval = setInterval(() => addBall(), 1000);
     return () => clearInterval(interval);
   },[]);
 
@@ -40,8 +31,8 @@ export default function App() {
           defaultContactMaterial={{ friction: 0.7, restitution: 0.4 }}
         >
           <Debug scale={1} color='green'>
-            <BallController counter={counter} />
-            <Container onAddBall={onAddBall} onRemoveBall={onRemoveBall} /> 
+            <BallController />
+            <Container/> 
           </Debug>
         </Physics>
 

@@ -3,7 +3,8 @@ import { useSphere } from '@react-three/cannon';
 
 export default function Ball({
   radius,
-  dropFromHeight
+  dropFromHeight,
+  name
 }) {
   const [ref] = useSphere(() => ({
     args: radius,
@@ -12,7 +13,7 @@ export default function Ball({
   }), useRef(null));
 
   return (
-  <mesh ref={ref} >
+  <mesh ref={ref} name={name}>
     <sphereGeometry args={radius}/>
     <meshStandardMaterial color='red' transparent opacity={0.7} />
   </mesh>
