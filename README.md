@@ -4,15 +4,15 @@ Having worked with React and Three.js, I was intrigued by the idea of a React ap
 
 I am specifically interested in Three.js + cannon physics and the react-three developer's [examples are pretty impressive](https://cannon.pmnd.rs/).
 
-Looking through the various projects, I couldn't find an instance of dynamically creating/destroying a collection of objects. 
-There are demos [where fix number of objects are created/destroyed](https://cannon.pmnd.rs/#/demo/CubeHeap) but I was looking for an example 
-where a specific item could be removed based on some criteria (like a collision event). In this scenario, the total amount of objects would grow and shrink over time.
+Looking through the various projects, I couldn't find an instance where a collection of objects (like a bunch of spheres) where being dynamically created/destroyed. I did find demos [where a fixed number of objects are created/destroyed](https://cannon.pmnd.rs/#/demo/CubeHeap). In the scenario I was thinking of, a specific item could be removed based on some criteria (like a collision event), with the total amount of objects growing and shrinking over time.
 
-In this example, a ball is created every second. When a ball collides with a wall, it is removed...
+With this in mind, I put together this example where a ball is created every second. When a ball collides with a wall, it is removed...
 
 ![dynamic-react-three-fiber_1080x703](https://user-images.githubusercontent.com/42591798/181865083-630fad5f-cbb0-49f3-becb-883b7b45718f.gif)
 
-As with React, using a hooked-based state-management solution will promote loose coupling and centralized logic. I recommend [zustand](https://www.npmjs.com/package/zustand), brought to you by the
+The balls are managed using the familar React component Array.map() method that iterates over a collections of ball objects. When a ball collides with a wall, it's key is used to filter it from the ball array. That's all you need to do. React Three takes care of removing the ball mesh from the scene (three.js) and the ball body from the world (cannon).
+
+To keep logic centralized, I recommend [zustand](https://www.npmjs.com/package/zustand), brought to you by the
 @react-three [collective of open-source developers](https://pmnd.rs/).
 
 
