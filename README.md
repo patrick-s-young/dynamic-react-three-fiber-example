@@ -12,7 +12,7 @@ With this in mind, I put together this example where a ball is created every sec
 
 ![dynamic-react-three-fiber_1080x703](https://user-images.githubusercontent.com/42591798/181865083-630fad5f-cbb0-49f3-becb-883b7b45718f.gif)
 
-The balls are managed using the familar React component Array.map() method that iterates over a collections of ball objects. When a ball collides with a wall, its key is used to filter it from the ball array. 
+The balls are managed using the familar React component Array.map() method that iterates over a collection of ball objects. When a ball collides with a wall, its key is used to filter it from the ball array. 
 
 That's all you need to do. React Three takes care of removing the ball mesh from the scene and the ball body from the world.
 
