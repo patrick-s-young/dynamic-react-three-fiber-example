@@ -1,4 +1,6 @@
-import React, { useRef } from "react";
+// react
+import { useRef } from "react";
+// physics body
 import { useSphere } from '@react-three/cannon';
 
 export default function Ball({
@@ -15,7 +17,7 @@ export default function Ball({
   return (
   <mesh ref={ref} name={name}>
     <sphereGeometry args={radius}/>
-    <meshStandardMaterial color='red' transparent opacity={0.7} />
+    <meshStandardMaterial color={0x00ff55} transparent opacity={0.7} />
   </mesh>
   )
 }

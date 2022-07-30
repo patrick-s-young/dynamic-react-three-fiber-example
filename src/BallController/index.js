@@ -1,7 +1,9 @@
-import Ball from '../Ball';
+// zustand
 import { useStore } from '../store';
+// ball component
+import Ball from '../Ball';
 
-export default function BallController () {
+export const BallController = () => {
   const balls = useStore(state => state.balls);
 
   return (
