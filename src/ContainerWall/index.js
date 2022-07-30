@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+// physics body
 import { useBox } from '@react-three/cannon';
+// zustand
 import { useStore } from '../store';
 
 export const ContainerWall = ({
