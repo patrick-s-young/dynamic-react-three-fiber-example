@@ -1,5 +1,4 @@
-# dynamic-react-three-fiber-example
-## Managing the dynamic adding and removing of React Three Fiber meshes and bodies
+# Managing the dynamic adding and removing of React Three Fiber meshes and bodies
 
 Having worked with React and Three.js, I was intrigued by the idea of a React approach to 3D web apps. 
 
