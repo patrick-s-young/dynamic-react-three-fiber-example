@@ -39,7 +39,6 @@ npm start
 * [@react-three/cannon](https://www.npmjs.com/package/@react-three/cannon) - React hooks for cannon-es, a rigid body physics engine.
 * [zustand](https://www.npmjs.com/package/zustand) - state-management solution that uses simplified flux principles.
 * [@react-three/drei](https://www.npmjs.com/package/@react-three/drei) - Helper library for @react-three/fiber.
-* [webpack](https://webpack.js.org/) - static module builder.
 
 ## Authors
 
